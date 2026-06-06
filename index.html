@@ -1,0 +1,242 @@
+<html>
+    <head>
+        <title>Contest 1</title>
+    </head>
+    <body>
+        <div
+            class="navbar"
+            style="display: flex; justify-content: space-between; align-items: center; padding: 15px 30px"
+        >
+            <div
+                class="navbar-left"
+                style="display: flex; align-items: center; gap: 30px"
+            >
+                <div class="logo">LOGO</div>
+                <div class="search-bar" style="padding: 8px 15px; width: 300px">
+                    <input type="text" placeholder="Search bar">
+                </div>
+            </div>
+            <div class="navbar-right" style="display: flex; gap: 20px">
+                <a href="/">About us</a>
+                <a href="/">Contact</a>
+                <a href="/">Signup</a>
+                <a href="/">Login</a>
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 20px; padding: 20px">
+            <div class="sidebar-left" style="width: 150px; padding: 20px">
+                <h3 id="totalItems" style="margin-bottom: 10px">
+                    Total Items: 5
+                </h3>
+            </div>
+
+            <div
+                id="productsBox"
+                style="flex: 1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px"
+            >
+                <div
+                    class="product-card"
+                    data-name="Item 1"
+                    data-price="100"
+                    style="background-color: white; border: 1px solid #ddd; border-radius: 4px; padding: 15px; text-align: center"
+                >
+                    <div
+                        class="product-image"
+                        style="width: 100%; height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; border-radius: 4px"
+                    >
+                        Image
+                    </div>
+                    <div class="product-details">
+                        <div style="font-size: 14px; margin-bottom: 10px">
+                            <span>Item 1</span> <span>100</span>
+                        </div>
+                    </div>
+                    <button
+                        class="add-btn"
+                        style="padding: 8px 15px; border-radius: 4px"
+                    >
+                        +
+                    </button>
+                </div>
+
+                <div
+                    id="2"
+                    class="product-card"
+                    data-name="Item 2"
+                    data-price="200"
+                    style="background-color: white; border: 1px solid #ddd; border-radius: 4px; padding: 15px; text-align: center"
+                >
+                    <div
+                        class="product-image"
+                        style="width: 100%; height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; border-radius: 4px"
+                    >
+                        Image
+                    </div>
+                    <div class="product-details">
+                        <div style="font-size: 14px; margin-bottom: 10px">
+                            <span>Item2</span> <span>200</span>
+                        </div>
+                    </div>
+                    <button
+                        class="add-btn"
+                        style="padding: 8px 15px; border-radius: 4px"
+                    >
+                        +
+                    </button>
+                </div>
+
+                <div
+                    id="3"
+                    class="product-card"
+                    data-name="Item 3"
+                    data-price="300"
+                    style="background-color: white; border: 1px solid #ddd; border-radius: 4px; padding: 15px; text-align: center"
+                >
+                    <div
+                        class="product-image"
+                        style="width: 100%; height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; border-radius: 4px"
+                    >
+                        Image
+                    </div>
+                    <div class="product-details">
+                        <div style="font-size: 14px; margin-bottom: 10px">
+                            <span>Item3</span> <span>300</span>
+                        </div>
+                    </div>
+                    <button
+                        class="add-btn"
+                        style="padding: 8px 15px; border-radius: 4px"
+                    >
+                        +
+                    </button>
+                </div>
+
+                <div
+                    id="4"
+                    class="product-card"
+                    data-name="Item 4"
+                    data-price="400"
+                    style="background-color: white; border: 1px solid #ddd; border-radius: 4px; padding: 15px; text-align: center"
+                >
+                    <div
+                        class="product-image"
+                        style="width: 100%; height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; border-radius: 4px"
+                    >
+                        Image
+                    </div>
+                    <div class="product-details">
+                        <div style="font-size: 14px; margin-bottom: 10px">
+                            <span>Item4</span> <span>400</span>
+                        </div>
+                    </div>
+                    <button
+                        class="add-btn"
+                        style="padding: 8px 15px; border-radius: 4px"
+                    >
+                        +
+                    </button>
+                </div>
+
+                <div
+                    id="5"
+                    class="product-card"
+                    data-name="Item 5"
+                    data-price="500"
+                    style="background-color: white; border: 1px solid #ddd; border-radius: 4px; padding: 15px; text-align: center"
+                >
+                    <div
+                        class="product-image"
+                        style="width: 100%; height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; border-radius: 4px"
+                    >
+                        Image
+                    </div>
+                    <div class="product-details">
+                        <div style="font-size: 14px; margin-bottom: 10px">
+                            <span>Item5</span> <span>500</span>
+                        </div>
+                    </div>
+                    <button
+                        class="add-btn"
+                        style="padding: 8px 15px; border-radius: 4px"
+                    >
+                        +
+                    </button>
+                </div>
+            </div>
+
+            <div class="sidebar-right" style="width: 200px; padding: 20px">
+                <h3 id="addedItems">Added Items: 0</h3>
+                <div id="itemList" class="item-list"></div>
+                <div id="totalPrice" class="total-price">Total Price: 0</div>
+            </div>
+        </div>
+
+        <script>
+            const totalItemsElement = document.getElementById(
+                "totalItems",
+            );
+            const addedItemsElement = document.getElementById(
+                "addedItems",
+            );
+            const itemListElement = document.getElementById(
+                "itemList",
+            );
+            const totalPriceElement = document.getElementById(
+                "totalPrice",
+            );
+            const productCards = document.querySelectorAll(
+                ".product-card",
+            );
+
+            let remainingItems = productCards.length;
+            let addedItems = 0;
+            let totalPrice = 0;
+
+            function updateSummary() {
+                totalItemsElement.textContent =
+                    "Total Items: " + remainingItems;
+                addedItemsElement.textContent =
+                    "Added Items: " + addedItems;
+                totalPriceElement.textContent =
+                    "Total Price: " + totalPrice;
+            }
+
+            productCards.forEach((card) => {
+                const button = card.querySelector(".add-btn");
+
+                button.addEventListener("click", () => {
+                    const name = card.dataset.name;
+                    const price = Number(card.dataset.price);
+
+                    const itemRow = document.createElement(
+                        "div",
+                    );
+                    const itemName = document.createElement(
+                        "span",
+                    );
+                    const itemPrice = document.createElement(
+                        "span",
+                    );
+
+                    itemName.textContent = name;
+                    itemPrice.textContent = price;
+                    itemPrice.style.float = "right";
+
+                    itemRow.appendChild(itemName);
+                    itemRow.appendChild(itemPrice);
+                    itemListElement.appendChild(itemRow);
+
+                    card.remove();
+                    remainingItems = remainingItems - 1;
+                    addedItems = addedItems + 1;
+                    totalPrice = totalPrice + price;
+
+                    updateSummary();
+                });
+            });
+
+            updateSummary();
+        </script>
+    </body>
+</html>
